@@ -4,6 +4,7 @@ import { Table } from "@tanstack/react-table"
 
 import { Input } from "@/components/ui/input"
 import ViewOptions from "@/components/table/ViewOptions"
+import { SliderFilter } from "@/components/table/SliderFilter"
 
 interface DataTableToolbarProps<TData> {
   table: Table<TData>
@@ -25,6 +26,8 @@ export default function Toolbar<TData>({
           }
           className="h-8 w-[150px] lg:w-[250px]"
         />
+        <SliderFilter type="min" table={table}/>
+        <SliderFilter type="max" table={table}/>
       </div>
       <ViewOptions table={table} />
     </div>
