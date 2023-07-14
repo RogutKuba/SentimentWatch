@@ -26,7 +26,7 @@ export const columns: ColumnDef<AnalyzedArticle>[] = [
         <DataTableColumnHeader column={column} title="Headline" />
     ),
     cell: ({ row }) => (
-      <a href={row.getValue("url")}>
+      <a href={row.getValue("url")} target="_blank">
         <span>{row.getValue("headline")}</span>
       </a>
     ),
