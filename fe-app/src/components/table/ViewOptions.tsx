@@ -39,7 +39,7 @@ export default function ViewOptions<TData>({
           .getAllColumns()
           .filter(
             (column) =>
-              typeof column.accessorFn !== "undefined" && column.getCanHide()
+              typeof column.accessorFn !== "undefined" && column.getCanHide() && column.id !== "url"
           )
           .map((column) => {
             return (

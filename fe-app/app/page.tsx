@@ -43,6 +43,7 @@ export default function DashboardPage() {
   
     if (error) console.log("error", error)
 
+    console.log("data", data)
     if (data) setData(data as never[])
   }
 

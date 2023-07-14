@@ -25,8 +25,19 @@ export const columns: ColumnDef<AnalyzedArticle>[] = [
     header: ({ column }) => (
         <DataTableColumnHeader column={column} title="Headline" />
     ),
+    cell: ({ row }) => (
+      <a href={row.getValue("url")}>
+        <span>{row.getValue("headline")}</span>
+      </a>
+    ),
     enableSorting: true,
     enableHiding: false,
+  },
+  {
+    id: "url",
+    accessorKey: "url",
+    enableSorting: false,
+    enableHiding: true,
   },
   {
     id: "ticker",
@@ -117,5 +128,5 @@ export const columns: ColumnDef<AnalyzedArticle>[] = [
     },
     enableSorting: false,
     enableHiding: true,
-  },
+  }
 ]
