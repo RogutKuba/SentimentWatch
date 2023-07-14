@@ -79,9 +79,10 @@ export const columns: ColumnDef<AnalyzedArticle>[] = [
         const timeInMilliseconds = row.getValue("date") as number * 1000
         const date = new Date(timeInMilliseconds)
         return (
-            <span className="text-sm text-gray-500">
-                {date.toLocaleDateString()}
-            </span>
+          <div className="text-sm text-gray-500 flex flex-col">
+            <span>{date.toLocaleDateString()}</span>
+            <span>{date.toLocaleTimeString([], { timeStyle: "short" })}</span>
+          </div>
         )
     },
     enableSorting: true,
