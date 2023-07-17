@@ -8,9 +8,14 @@ export function Sidebar() {
                     SentimentWatch 
                 </h2>
             </div>
-            <p className="text-sm font-light text-muted-foreground">
+            <p className="text-sm font-light text-muted-foreground mb-4">
                 Use AI to effortlessly keep up with the latest financial sentiment in news
             </p>
+            <a href="https://blog.sentimentwatch.xyz/" target="_blank">
+                <p className="text-sm font-light text-muted-foreground underline">
+                    Blog
+                </p>
+            </a>
         </div>
     </div>
   )

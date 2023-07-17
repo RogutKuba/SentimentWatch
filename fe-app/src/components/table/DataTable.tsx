@@ -50,6 +50,11 @@ export default function DataTable<TData, TValue>({
       sorting,
       columnVisibility,
     },
+    initialState: {
+      pagination: {
+        pageSize: 20,
+      },
+    },
     onSortingChange: setSorting,
     onColumnVisibilityChange: setColumnVisibility,
     getCoreRowModel: getCoreRowModel(),
